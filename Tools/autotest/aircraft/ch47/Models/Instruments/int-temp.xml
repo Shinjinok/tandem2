@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <animation>
+        <type>material</type>
+        <object-name>Temp1.face</object-name>
+        <object-name>Temp1.needle</object-name>
+        <emission>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+<path>int-temp.ac</path>
+
+</PropertyList>

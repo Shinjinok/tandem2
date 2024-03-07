@@ -398,6 +398,7 @@ void AP_AHRS::update(bool skip_ins_update)
 
 #if AP_AHRS_SIM_ENABLED
     update_SITL();
+    
 #endif
 
 #if AP_AHRS_EXTERNAL_ENABLED

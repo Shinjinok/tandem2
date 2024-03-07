@@ -152,7 +152,12 @@ const AP_Scheduler::Task Copter::scheduler_tasks[] = {
 #if AP_FENCE_ENABLED
     SCHED_TASK(fence_check,           25,    100,  7),
 #endif
+#if AP_SIM_ENABLED // sjo edited
+    SCHED_TASK_CLASS(AP_GPS,               &copter.gps,                 update,          200, 200,   9),
+#else
     SCHED_TASK_CLASS(AP_GPS,               &copter.gps,                 update,          50, 200,   9),
+#endif
+
 #if AP_OPTICALFLOW_ENABLED
     SCHED_TASK_CLASS(AP_OpticalFlow,          &copter.optflow,             update,         200, 160,  12),
 #endif

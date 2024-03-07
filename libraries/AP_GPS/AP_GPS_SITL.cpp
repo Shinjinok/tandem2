@@ -60,6 +60,7 @@ static void gps_time(uint16_t *time_week, uint32_t *time_week_ms)
 bool AP_GPS_SITL::read(void)
 {
     const uint32_t now = AP_HAL::millis();
+    //printf("gps sitl read %d\n",now - last_update_ms); // sjo edited
     if (now - last_update_ms < 200) {
         return false;
     }

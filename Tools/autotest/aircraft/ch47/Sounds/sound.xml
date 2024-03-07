@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <fx>
+
+        <rotor>
+            <name>rotor</name>
+            <reference-dist>150</reference-dist>
+            <max-dist>1000</max-dist>
+            <mode>looped</mode>
+            <path>Aircraft/ch47/Sounds/rotor.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>10</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+                </and>
+            </condition>
+            <volume>
+                <property>rotors/main/rpm</property>
+                <factor>0.004</factor>
+                <max>1.2</max>
+            </volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <pitch>
+                <property>rotors/main/rpm</property>
+                <factor>0.0044</factor>
+                <offset>0</offset>
+                <max>1.0</max>
+            </pitch>
+        </rotor>
+
+        <contact>
+            <name>ground contact</name>
+            <mode>once</mode>
+            <reference-dist>5</reference-dist>
+            <max-dist>10</max-dist>
+            <path>Sounds/helicopter-skid.wav</path>
+            <condition>
+                <property>gear/gear[0]/wow</property>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <factor>0.01</factor>
+            </pitch>
+        </contact>
+
+        <contact>
+            <name>ground contact</name>
+            <mode>once</mode>
+            <reference-dist>5</reference-dist>
+            <max-dist>10</max-dist>
+            <path>Sounds/helicopter-skid.wav</path>
+            <condition>
+                <property>gear/gear[1]/wow</property>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <factor>0.01</factor>
+            </pitch>
+        </contact>
+
+        <contact>
+            <name>ground contact</name>
+            <mode>once</mode>
+            <reference-dist>5</reference-dist>
+            <max-dist>10</max-dist>
+            <path>Sounds/helicopter-skid.wav</path>
+            <condition>
+                <property>gear/gear[2]/wow</property>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <factor>0.01</factor>
+            </pitch>
+        </contact>
+
+        <contact>
+            <name>ground contact</name>
+            <mode>once</mode>
+            <reference-dist>5</reference-dist>
+            <max-dist>10</max-dist>
+            <path>Sounds/helicopter-skid.wav</path>
+            <condition>
+                <property>gear/gear[3]/wow</property>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <factor>0.01</factor>
+            </pitch>
+        </contact>
+
+        <wind>
+            <name>wind</name>
+            <mode>looped</mode>
+            <reference-dist>2</reference-dist>
+            <max-dist>5</max-dist>
+            <path>Sounds/wind.wav</path>
+            <condition>
+                <and>
+                    <property>velocities/airspeed-kt</property>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+                </and>
+            </condition>
+            <volume>
+                <property>position/altitude-ft</property>
+                <factor>-0.000015</factor>
+                <offset>1.0</offset>
+                <min>0.1</min>
+                <max>1.0</max>
+            </volume>
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.0015</factor>
+                <min>0.03</min>
+                <max>0.25</max>
+            </volume>
+            <pitch>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.01</factor>
+                <offset>1.25</offset>
+            </pitch>
+        </wind>
+
+        <crash>
+            <name>intense ground contact</name>
+            <mode>once</mode>
+            <reference-dist>500</reference-dist>
+            <max-dist>1000</max-dist>
+            <path>Sounds/crash.wav</path>
+            <property>sim/crashed</property>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <pitch>
+                <factor>0.1</factor>
+            </pitch>
+        </crash>
+    </fx>
+</PropertyList>

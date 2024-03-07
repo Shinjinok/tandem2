@@ -26,6 +26,7 @@
 #include <SITL/SIM_Tracker.h>
 #include <SITL/SIM_Balloon.h>
 #include <SITL/SIM_FlightAxis.h>
+#include <SITL/SIM_FlightGear2.h>
 #include <SITL/SIM_Calibration.h>
 #include <SITL/SIM_XPlane.h>
 #include <SITL/SIM_Submarine.h>
@@ -166,6 +167,7 @@ static const struct {
     { "crrcsim",            CRRCSim::create },
     { "jsbsim",             JSBSim::create },
     { "flightaxis",         FlightAxis::create },
+    { "flightgear2",         FlightGear2::create },// sjo edited
     { "gazebo",             Gazebo::create },
     { "last_letter",        last_letter::create },
     { "tracker",            Tracker::create },

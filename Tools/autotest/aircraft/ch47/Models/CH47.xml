@@ -1,0 +1,892 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<PropertyList>
+    <path>ch47.ac</path>
+
+    <nasal>
+        <load>
+            var livery_update = aircraft.livery_update.new("Aircraft/ch47/Models/Liveries", 10);
+        </load>
+
+        <unload>
+            livery_update.stop();
+        </unload>
+    </nasal>
+
+    <animation>
+        <type>material</type>
+        <object-name>Fuselage</object-name>
+        <object-name>Ramp</object-name>
+        <object-name>Ldoor</object-name>
+        <object-name>Rdoor</object-name>
+        <object-name>Rengine</object-name>
+        <object-name>Lengine</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture</texture-prop>
+        <texture>paint1.png</texture>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/ch47/Models/chrome1.png</texture>
+        <object-name>Wshield</object-name>
+        <object-name>Rdoor.glass</object-name>
+        <object-name>Ldoor.glass</object-name>
+        <object-name>RH.glass</object-name>
+        <object-name>LH.glass</object-name>
+    </animation>
+
+<!--LH PANEL-->
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/vsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.419</y-m>
+            <z-m>-0.023</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/asi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.673</y-m>
+            <z-m>0.084</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/ralt.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.675</y-m>
+            <z-m>-0.016</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/chronometer.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.667</y-m>
+            <z-m>-0.113</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/ai.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.549</y-m>
+            <z-m>0.081</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/alt.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.425</y-m>
+            <z-m>0.087</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/rtr-rpm.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.786</y-m>
+            <z-m>-0.038</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/eng-trq.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.786</y-m>
+            <z-m>0.072</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/hsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.557</y-m>
+            <z-m>-0.058</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/hsi-ctl.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.557</y-m>
+            <z-m>-0.133</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+
+<!--RH PANEL-->
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/vsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.718</y-m>
+            <z-m>-0.010</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/asi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.454</y-m>
+            <z-m>0.083</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/ralt.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.454</y-m>
+            <z-m>-0.015</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/ai.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.584</y-m>
+            <z-m>0.085</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/alt.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.710</y-m>
+            <z-m>0.094</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/rtr-rpm.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.355</y-m>
+            <z-m>-0.085</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/eng-trq.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.355</y-m>
+            <z-m>0.018</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/aoa.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.355</y-m>
+            <z-m>0.108</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/hsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.576</y-m>
+            <z-m>-0.058</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/hsi-ctl.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.576</y-m>
+            <z-m>-0.133</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/chronometer.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.459</y-m>
+            <z-m>-0.116</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+<!--  CENTER PANEL -->
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/radar.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.183</y-m>
+            <z-m>0.072</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/N1.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.031</y-m>
+            <z-m>0.060</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/N1.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.039</y-m>
+            <z-m>0.060</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.106</y-m>
+            <z-m>0.060</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.181</y-m>
+            <z-m>0.060</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/temp.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.031</y-m>
+            <z-m>-0.005</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/temp.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.039</y-m>
+            <z-m>-0.005</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.106</y-m>
+            <z-m>-0.005</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.181</y-m>
+            <z-m>-0.005</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/int-temp.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.031</y-m>
+            <z-m>-0.067</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/int-temp.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.039</y-m>
+            <z-m>-0.067</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.106</y-m>
+            <z-m>-0.067</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.181</y-m>
+            <z-m>-0.067</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/oilpsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>-0.031</y-m>
+            <z-m>-0.130</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/oilpsi.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.039</y-m>
+            <z-m>-0.130</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.106</y-m>
+            <z-m>-0.130</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.181</y-m>
+            <z-m>-0.130</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/ch47/Models/Instruments/empty.xml</path>
+        <offsets>
+            <x-m>-6.772</x-m>
+            <y-m>0.181</y-m>
+            <z-m>-0.189</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+<animation>
+        <type>rotate</type>
+        <object-name>Ramp</object-name>
+        <property>sim/multiplay/generic/float</property>
+        <factor>42</factor>
+        <center>
+            <x-m>5.203</x-m>
+            <y-m>0</y-m>
+            <z-m>-1.082</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>Hub1</object-name>
+        <object-name>Blade.11</object-name>
+        <object-name>Blade.12</object-name>
+        <object-name>Blade.13</object-name>
+        <object-name>pitchlink.11</object-name>
+        <object-name>pitchlink.12</object-name>
+        <object-name>pitchlink.13</object-name>
+        <property>rotors/main/tilt/pitch-deg</property>
+        <center>
+            <x-m>-5.782</x-m>
+            <y-m>0</y-m>
+            <z-m>2.438</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>Hub1</object-name>
+<object-name>Blade.11</object-name>
+<object-name>Blade.12</object-name>
+<object-name>Blade.13</object-name>
+<object-name>pitchlink.11</object-name>
+<object-name>pitchlink.12</object-name>
+<object-name>pitchlink.13</object-name>
+        <property>rotors/main/rpm</property>
+        <axis>
+            <x>0.0</x>
+            <y>0</y>
+            <z>1.0</z>
+        </axis>
+        <center>
+            <x-m>-5.778</x-m>
+            <y-m>0</y-m>
+            <z-m>2.184</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.11</object-name>
+        <property>rotors/main/blade/incidence-deg</property>
+        <axis>
+            <x>1.0</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-5.363</x-m>
+            <y-m>0.011</y-m>
+            <z-m>2.415</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.11</object-name>
+        <property>rotors/main/blade/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.11</object-name>
+        <property>rotors/main/blade/flap-deg</property>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-5.531</x-m>
+            <y-m>0.253</y-m>
+            <z-m>2.417</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.12</object-name>
+        <property>rotors/main/blade[1]/incidence-deg</property>
+        <axis>
+            <x>-0.5</x>
+            <y>0.866</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-5.984</x-m>
+            <y-m>0.358</y-m>
+            <z-m>2.415</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.12</object-name>
+        <property>rotors/main/blade[1]/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+   <animation>
+        <type>rotate</type>
+        <object-name>Blade.12</object-name>
+        <property>rotors/main/blade[1]/flap-deg</property>
+        <axis>
+            <x>0.866</x>
+            <y>0.5</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-5.916</x-m>
+            <y-m>0.239</y-m>
+            <z-m>2.417</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.13</object-name>
+        <property>rotors/main/blade[2]/incidence-deg</property>
+        <axis>
+            <x>-0.5</x>
+            <y>-0.866</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-5.985</x-m>
+            <y-m>-0.358</y-m>
+            <z-m>2.414</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.13</object-name>
+        <property>rotors/main/blade[2]/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+   <animation>
+        <type>rotate</type>
+        <object-name>Blade.13</object-name>
+        <property>rotors/main/blade[2]/flap-deg</property>
+        <axis>
+            <x>-0.866</x>
+            <y>0.5</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-5.916</x-m>
+            <y-m>-0.240</y-m>
+            <z-m>2.417</z-m>
+        </center>
+    </animation>
+
+<!--    Rear Rotor-->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Hub2</object-name>
+        <object-name>Blade.21</object-name>
+        <object-name>Blade.22</object-name>
+        <object-name>Blade.23</object-name>
+        <object-name>pitchlink.21</object-name>
+        <object-name>pitchlink.22</object-name>
+        <object-name>pitchlink.23</object-name>
+        <property>rotors/tail/tilt/pitch-deg</property>
+        <center>
+            <x-m>6.045</x-m>
+            <y-m>0</y-m>
+            <z-m>3.496</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>Hub2</object-name>
+<object-name>Blade.21</object-name>
+<object-name>Blade.22</object-name>
+<object-name>Blade.23</object-name>
+<object-name>pitchlink.21</object-name>
+<object-name>pitchlink.22</object-name>
+<object-name>pitchlink.23</object-name>
+        <property>rotors/tail/rpm</property>
+        <axis>
+            <x>0.0</x>
+            <y>0</y>
+            <z>-1.0</z>
+        </axis>
+        <center>
+            <x-m>6.045</x-m>
+            <y-m>0</y-m>
+            <z-m>3.496</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.21</object-name>
+        <property>rotors/tail/blade/incidence-deg</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>6.425</x-m>
+            <y-m>0.0</y-m>
+            <z-m>3.734</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.21</object-name>
+        <property>rotors/tail/blade/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.21</object-name>
+        <property>rotors/tail/blade/flap-deg</property>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>6.288</x-m>
+            <y-m>-0.253</y-m>
+            <z-m>3.733</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.22</object-name>
+        <property>rotors/tail/blade[1]/incidence-deg</property>
+        <axis>
+            <x>0.5</x>
+            <y>-0.866</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>5.855</x-m>
+            <y-m>0.329</y-m>
+            <z-m>3.734</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.22</object-name>
+        <property>rotors/tail/blade[1]/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+   <animation>
+        <type>rotate</type>
+        <object-name>Blade.22</object-name>
+        <property>rotors/tail/blade[1]/flap-deg</property>
+        <axis>
+            <x>0.866</x>
+            <y>0.5</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>5.909</x-m>
+            <y-m>0.236</y-m>
+            <z-m>3.734</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Blade.23</object-name>
+        <property>rotors/tail/blade[2]/incidence-deg</property>
+        <axis>
+            <x>0.5</x>
+            <y>0.866</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>5.855</x-m>
+            <y-m>-0.329</y-m>
+            <z-m>3.734</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>pitchlink.23</object-name>
+        <property>rotors/tail/blade[2]/incidence-deg</property>
+        <factor>0.0047</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+   <animation>
+        <type>rotate</type>
+        <object-name>Blade.23</object-name>
+        <property>rotors/tail/blade[2]/flap-deg</property>
+        <axis>
+            <x>-0.866</x>
+            <y>0.5</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>5.909</x-m>
+            <y-m>-0.235</y-m>
+            <z-m>3.734</z-m>
+        </center>
+    </animation>
+
+<!--    Gear    -->
+
+    <animation>
+        <type>translate</type>
+        <object-name>LHstrut</object-name>
+        <object-name>LHhub</object-name>
+        <object-name>LHtire</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>RHstrut</object-name>
+        <object-name>RHhub</object-name>
+        <object-name>RHtire</object-name>
+        <property>gear/gear[1]/compression-m</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>LHstrut.rear</object-name>
+        <object-name>LHhub.rear</object-name>
+        <object-name>LHtire.rear</object-name>
+        <property>gear/gear[2]/compression-m</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>RHstrut.rear</object-name>
+        <object-name>RHhub.rear</object-name>
+        <object-name>RHtire.rear</object-name>
+        <property>gear/gear[3]/compression-m</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+<!--  Controls -->
+
+    <animation>
+        <type>translate</type>
+        <object-name>Ebrake.lever</object-name>
+        <property>controls/gear/brake-parking</property>
+        <factor>0.0150</factor>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+<!-- Hotspots-->
+
+    <animation>
+        <type>pick</type>
+        <object-name>Ebrake.lever</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-toggle</command>
+            <property>controls/gear/brake-parking</property>
+        </binding>
+        </action>
+    </animation>
+
+</PropertyList>

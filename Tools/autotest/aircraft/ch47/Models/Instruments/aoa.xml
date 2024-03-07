@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>aoa.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>AOA.face</object-name>
+        <object-name>AOA.needle</object-name>
+        <emission>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>AOA.needle</object-name>
+        <property>orientation/alpha-deg</property>
+        <interpolation>
+            <entry><ind>-5</ind><dep>0.0</dep></entry>
+            <entry><ind>15</ind><dep>245.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.042</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+</PropertyList>

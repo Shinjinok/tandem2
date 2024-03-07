@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>N1.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>N1.face</object-name>
+        <object-name>N1.needle</object-name>
+        <emission>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+</PropertyList>
+

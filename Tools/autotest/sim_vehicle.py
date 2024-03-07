@@ -302,7 +302,9 @@ def kill_tasks():
             'scrimmage',
             'ardurover',
             'arduplane',
-            'arducopter'
+            'arducopter',
+            'arducopter-heli', # sjo edited
+            'arducopter-heli.elf' # sjo edited
         }
         for vehicle in vinfo.options:
             for frame in vinfo.options[vehicle]["frames"]:

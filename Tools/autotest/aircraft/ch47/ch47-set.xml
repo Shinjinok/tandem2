@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+CH-47 Chinook simulation config.
+************************************************************************
+-->
+
+<PropertyList>
+    <sim>
+        <description>CH-47 Chinook</description>
+        <author>Melchior Franz, Maik Justus (FDM),Syd Adams (3D),AndersG</author>
+        <status>alpha</status>
+        <aircraft-version>0.1</aircraft-version>
+
+	<tags>
+		<tag>helicopter</tag>
+		<tag>boeing</tag>
+		<tag>1960s</tag>
+		<tag>1970s</tag>
+		<tag>1980s</tag>
+		<tag>1990s</tag>
+		<tag>2000s</tag>
+		<tag>2010s</tag>
+		<tag>vietnam</tag>
+		<tag>gulfwar1</tag>
+		<tag>gulfwar2</tag>
+		<tag>fixed-gear</tag>
+		<tag>ifr</tag>
+		<tag>vtol</tag>
+		<tag>turboprop</tag>
+		<tag>twin-engine</tag>
+		<tag>tow</tag>
+	</tags>
+
+		
+	<previews>
+		<preview>
+			<type>exterior</type>
+			<splash type="bool">true</splash>
+			<path>Pics/chinook-exterior.jpg</path>
+		</preview>
+		<preview>
+			<type>panel</type>
+			<splash type="bool">true</splash>
+			<path>Pics/chinook-interior.jpg</path>
+		</preview>
+	</previews>
+
+        <flight-model>yasim</flight-model>
+        <aero>ch47d</aero>
+        <fuel-fraction>0.8</fuel-fraction>
+
+
+        <instrumentation>
+            <path>Aircraft/ch47/instrumentation.xml</path>
+        </instrumentation>
+
+        <sound>
+            <path>Aircraft/ch47/Sounds/sound.xml</path>
+        </sound>
+
+        <systems>
+            <electrical>
+                <path></path>
+            </electrical>
+        </systems>
+
+        <panel>
+            <visibility archive="n">false</visibility>
+        </panel>
+
+        <model>
+            <path archive="y">Aircraft/ch47/Models/CH47.xml</path>
+            <livery>
+                <file type="string">Army</file>
+            </livery>
+        </model>
+
+        <startup>
+            <splash-texture>Aircraft/ch47/ch47-splash.png</splash-texture>
+        </startup>
+
+        <view n="0">
+            <internal archive="y">true</internal>
+            <name>Pilot View</name>
+            <config>
+                <x-offset-m archive="y">0.45</x-offset-m>
+                <!--right-->
+                <y-offset-m archive="y">0.55</y-offset-m>
+                <!--up-->
+                <z-offset-m archive="y">-5.86</z-offset-m>
+                <!--back-->
+                <pitch-offset-deg>-15</pitch-offset-deg>
+                <default-field-of-view-deg>65</default-field-of-view-deg>
+                <limits>
+                    <enabled type="bool">true</enabled>
+                    <left>
+                    <heading-max-deg type="double">140</heading-max-deg>
+                    <x-offset-max-m type="double">0.25</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                    </left>
+                    <right>
+                        <heading-max-deg type="double">160</heading-max-deg>
+                        <x-offset-max-m type="double">0.35</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                    </right>
+                </limits>
+            </config>
+        </view>
+
+        <view n="100">
+    <name>Copilot View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+        <x-offset-m archive="y">-0.45</x-offset-m>
+        <y-offset-m archive="y">0.55</y-offset-m>
+        <z-offset-m archive="y">-5.86</z-offset-m>
+        <pitch-offset-deg>-15</pitch-offset-deg>
+        <limits>
+            <enabled type="bool">true</enabled>
+            <left>
+                <heading-max-deg type="double">140</heading-max-deg>
+                <x-offset-max-m type="double">0.35</x-offset-max-m>
+                <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+            </left>
+            <right>
+                <heading-max-deg type="double">160</heading-max-deg>
+                <x-offset-max-m type="double">0.25</x-offset-max-m>
+                <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+            </right>
+        </limits>
+    </config>
+    <dynamic>
+      <enabled type="bool">false</enabled>
+    </dynamic>
+  </view>
+
+        <chase-distance-m>-35</chase-distance-m>
+
+        <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <airport>
+        <runways>
+            <start-offset-m>30</start-offset-m>
+        </runways>
+    </airport>
+
+        <weight n="0">
+            <name>Pilot</name>
+            <weight-lb>180</weight-lb>
+            <max-lb>300</max-lb>
+        </weight>
+
+        <weight n="1">
+            <name>Co-Pilot</name>
+            <weight-lb>180</weight-lb>
+            <max-lb>300</max-lb>
+        </weight>
+
+        <weight n="2">
+            <name>Cargo</name>
+            <weight-lb>0</weight-lb>
+            <max-lb>25000</max-lb>
+        </weight>
+
+
+        <help>
+            <title>CH47</title>
+        </help>
+
+    <menubar>
+        <default>
+            <menu n="100">
+                <label>Chinook</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Start Idling</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/start-idling</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Operate Ramp</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>CH47.ramp.toggle()</script>
+                    </binding>
+                </item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+                <item>
+                    <label>Find Aircraft to Tow [Ctrl o]</label>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/controls/aerotow/find-aircraft</property>
+                        <value type="bool">true</value>
+                    </binding>
+                    <mod-up>
+                        <binding>
+                            <command>property-assign</command>
+                            <property>controls/aerotow/find-aircraft</property>
+                            <value type="bool">false</value>
+                        </binding>
+                    </mod-up>
+                </item>
+                <item>
+                    <label>lock tow hook [o]</label>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>sim/hitches/aerotow/open</property>
+                        <value type="bool">false</value>
+                    </binding>
+                </item>
+                <item>
+                    <label>open tow hook [O]</label>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>sim/hitches/aerotow/open</property>
+                        <value type="bool">true</value>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+    <hitches>
+      <!-- make sure some properties do exist, when the list for multiplayer transfer is defined-->
+      <!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset should fix this somehow-->
+      <aerotow>
+        <tow>
+          <length type="float">30</length>
+          <elastic-constant type="float">10000</elastic-constant>
+          <weight-per-m-kg-m type="float">0.035</weight-per-m-kg-m>
+          <dist type="float">1</dist>
+          <connected-to-property-node type="bool"></connected-to-property-node>
+          <brake-force type="float">100000</brake-force>
+          <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+          <end-force-x type ="float">0</end-force-x>
+          <end-force-y type ="float">0</end-force-y>
+          <end-force-z type ="float">0</end-force-z>
+        </tow>
+        <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+        <open type="bool">true</open>
+        <local-pos-x type="float">0</local-pos-x>
+        <local-pos-y type="float">0</local-pos-y>
+        <local-pos-z type="float">0</local-pos-z>
+        <is-slave type="bool">false</is-slave>
+      </aerotow>
+    </hitches>
+
+    </sim>
+
+    <input>
+        <keyboard>
+            <key n="78">
+                <name>N</name>
+                <desc>Toggle rotor brake</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/rotor/brake</property>
+                </binding>
+            </key>
+      <key n="15">
+        <name>Ctrl-o</name>
+        <desc>Find aircraft for aerotow</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/aerotow/find-aircraft</property>
+          <value type="bool">true</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>/controls/aerotow/find-aircraft</property>
+            <value type="bool">false</value>
+          </binding>
+        </mod-up>
+      </key>
+      <key n="111">
+        <name>o</name>
+        <desc>Lock aerotow hook</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/hitches/aerotow/open</property>
+          <value type="bool">false</value>
+        </binding>
+      </key>
+      <key n="79">
+        <name>O</name>
+        <desc>Open aerotow hook</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/hitches/aerotow/open</property>
+          <value type="bool">true</value>
+        </binding>
+      </key>
+        </keyboard>
+    </input>
+
+    <controls>
+        <engines>
+            <engine n="0">
+                <magnetos>0</magnetos>
+            </engine>
+            <engine n="1">
+                <throttle>1</throttle>
+            </engine>
+        </engines>
+        <gear>
+            <brake-parking>1.0</brake-parking>
+        </gear>
+        <rotor>
+            <pitch>1</pitch>
+        </rotor>
+        <lighting>
+            <strobe type="bool">true</strobe>
+            <beacon type="bool">true</beacon>
+            <nav-lights type="bool">true</nav-lights>
+        </lighting>
+    <aerotow>
+      <find-aircraft type="bool">false</find-aircraft>
+    </aerotow>
+    </controls>
+
+        <instrumentation>
+        <gsdi>
+            <serviceable type="bool">true</serviceable>
+        </gsdi>
+            <inst-vertical-speed-indicator>
+                <serviceable type="bool">true</serviceable>
+            </inst-vertical-speed-indicator>
+        <radar>
+            <serviceable type="bool" archive="y">true</serviceable>
+            <switch type="string" archive="y">on</switch>
+            <mode-control type="int" archive="y">3</mode-control>
+            <range type="int" archive="y">20</range>
+            <mode type="string"	archive="y">WX</mode>
+            <heading-marker type="bool"	archive="y">false</heading-marker>
+            <lightning type="bool" archive="y">false</lightning>
+            <display-mode type="string">plan</display-mode>
+            <radar-texture-path type="string" archive="y">Aircraft/ch47/Models/Instruments/radarscreen.png</radar-texture-path>
+            <echo-texture-path type="string" archive="y">Aircraft/ch47/Models/Instruments/wxecho.png</echo-texture-path>
+            <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <data type="bool" archive="y">false</data>
+                <pos type="bool" archive="y">true</pos>
+                <centre type="bool" archive="y">true</centre>
+            </display-controls>
+        </radar>
+        <transponder>
+            <inputs>
+                <serviceable type="bool">true</serviceable>
+            </inputs>
+        </transponder>
+        <nav>
+            <serviceable type="bool">true</serviceable>
+        </nav>
+        <nav n="1">
+            <serviceable type="bool">true</serviceable>
+        </nav>
+        <comm>
+            <serviceable type="bool">true</serviceable>
+        </comm>
+        <comm n="1">
+            <serviceable type="bool">true</serviceable>
+        </comm>
+    </instrumentation>
+
+    <rotors>
+        <main>
+            <rpm type="double">0</rpm>
+        </main>
+        <tail>
+            <rpm type="double">0</rpm>
+        </tail>
+    </rotors>
+
+    <nasal>
+        <CH47>
+            <file>Aircraft/ch47/Nasal/systems.nas</file>
+            <file>Aircraft/ch47/Nasal/Electrical.nas</file>
+            <script>
+         setlistener("/sim/signals/fdm-initialized", func {
+             var left  = screen.display.new(20, 10);
+             left.add("/controls/engines/engine[0]/throttle");
+             left.add("/controls/engines/engine[1]/throttle");
+             left.add("/controls/flight/aileron");
+             left.add("/controls/flight/elevator");
+             left.add("/controls/flight/rudder");
+             
+
+              var right = screen.display.new(-250, 20);
+             right.add("/position/altitude-agl-ft");
+             right.add("rotors/main/rpm");
+             right.add("/orientation/roll-deg");
+             right.add("/orientation/pitch-deg");
+             right.add("/orientation/heading-deg");
+             right.add("/orientation/roll-rate-degps");
+             right.add("/orientation/pitch-rate-degps");
+             right.add("/orientation/yaw-rate-degps");
+             right.add("/accelerations/pilot/x-accel-fps_sec");
+             right.add("/accelerations/pilot/y-accel-fps_sec");
+             right.add("/accelerations/pilot/z-accel-fps_sec");
+             right.add("/velocities/speed-north-fps");
+             right.add("/velocities/speed-east-fps");
+             right.add("/velocities/speed-down-fps");
+         });
+        </script>
+        </CH47>
+    </nasal>
+
+</PropertyList>

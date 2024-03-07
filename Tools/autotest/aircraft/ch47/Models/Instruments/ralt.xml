@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>ralt.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>RA.face</object-name>
+        <object-name>RA.needle</object-name>
+        <emission>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>led4</object-name>
+        <condition>
+            <less-than>
+            <property>position/gear-agl-ft</property>
+            <value>1500</value>
+            </less-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>led3</object-name>
+        <condition>
+            <and>
+            <less-than>
+                <property>position/gear-agl-ft</property>
+                <value>1500</value>
+            </less-than>
+            <greater-than>
+                <property>position/gear-agl-ft</property>
+                <value>9.999</value>
+            </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>led2</object-name>
+        <condition>
+            <and>
+            <less-than>
+                <property>position/gear-agl-ft</property>
+                <value>1500</value>
+            </less-than>
+            <greater-than>
+                <property>position/gear-agl-ft</property>
+                <value>99.999</value>
+            </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>led1</object-name>
+        <condition>
+            <and>
+            <less-than>
+                <property>position/gear-agl-ft</property>
+                <value>1500</value>
+            </less-than>
+            <greater-than>
+                <property>position/gear-agl-ft</property>
+                <value>999.999</value>
+            </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>RA.needle</object-name>
+        <property>position/gear-agl-ft</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>200</ind><dep>180.0</dep></entry>
+            <entry><ind>500</ind><dep>200.0</dep></entry>
+            <entry><ind>1000</ind><dep>235.0</dep></entry>
+            <entry><ind>1500</ind><dep>270.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>led4</object-name>
+        <property>position/gear-agl-ft</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>led3</object-name>
+        <property>position/gear-agl-ft</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>led2</object-name>
+        <property>position/gear-agl-ft</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>led1</object-name>
+        <property>position/gear-agl-ft</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+</PropertyList>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>radar.ac</path>
+
+    <animation>
+        <name>Radar</name>
+        <object-name>Radar.bezel</object-name>
+        <object-name>Radar.bkgrd</object-name>
+        <object-name>Radar.screen</object-name>
+    </animation>
+
+</PropertyList>

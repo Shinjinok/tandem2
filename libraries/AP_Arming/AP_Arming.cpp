@@ -790,6 +790,7 @@ bool AP_Arming::manual_transmitter_checks(bool report)
 
         if (AP_Notify::flags.failsafe_radio) {
             check_failed(ARMING_CHECK_RC, report, "Radio failsafe on");
+            printf("Radio failsafe on\n"); // sjo edited
             return false;
         }
 
