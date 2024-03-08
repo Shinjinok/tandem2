@@ -102,17 +102,17 @@ FlightGear2::FlightGear2(const char *frame_str) :
 /*
   Create and set in/out socket
 */
-void FlightGear2::set_interface_ports(const char* address, const int port_in_, const int port_out_)
+void FlightGear2::set_interface_ports(const char* address, const int port_in, const int port_out)
 {
     // try to bind to a specific port so that if we restart ArduPilot
     // FlightGear2 keeps sending us packets. Not strictly necessary but
     // useful for debugging
     
-    int port_in =  port_in_ + instance * 10;
+   // int port_in =  port_in_ + instance * 10;
     
-    int  port_out = port_out_ + instance * 10;
+   // int  port_out = port_out_ + instance * 10;
 
-    printf("port_in %d port_out %d\n ",port_in,port_out);
+    printf("^^port_in %d port_out %d\n ",port_in,port_out);
     if (!sock.bind(address, port_in)) {
         fprintf(stderr, "SITL: socket in bind failed on sim in : %d  - %s\n", port_in, strerror(errno));
         fprintf(stderr, "Aborting launch...\n");

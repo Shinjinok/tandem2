@@ -1,1 +1,3 @@
 ardupilot clone 2024/3/6 16:00
+
+RC_OPTION set 1024 #Enable multiple receiver support on autopilot
