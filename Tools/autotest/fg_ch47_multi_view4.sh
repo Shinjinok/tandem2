@@ -8,16 +8,16 @@
 AUTOTESTDIR=$(dirname $0)
 
 nice fgfs \
-    --generic=socket,in,20,,9002,udp,MAVLink \
-    --generic=socket,out,20,,9003,udp,MAVLink \
-    --multiplay=out,10,127.0.0.1,8000 \
-    --multiplay=in,10,127.0.0.1,8001 \
-    --callsign=Test1 \
+    --generic=socket,in,20,,9012,udp,MAVLink \
+    --generic=socket,out,20,,9013,udp,MAVLink \
+    --multiplay=out,10,127.0.0.1,10000 \
+    --multiplay=in,10,127.0.0.1,10004 \
+    --callsign=Test4 \
     --model-hz=120 \
     --aircraft=ch47 \
     --fg-aircraft="$AUTOTESTDIR/aircraft" \
     --lon=-157.926 \
-    --lat=21.313 \
+    --lat=21.3134 \
     --geometry=650x550 \
     --bpp=32 \
     --disable-hud-3d \
@@ -36,5 +36,4 @@ nice fgfs \
     --prop:/sim/rendering/multithreading-mode=CullThreadPerCameraDrawThreadPerContext \
     --prop:/sim/rendering/multi-samples=3 \
     --prop:/sim/rendering/multi-sample-buffers=true \
-
     $*
